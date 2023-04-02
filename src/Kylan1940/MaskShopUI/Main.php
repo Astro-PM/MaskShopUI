@@ -90,7 +90,7 @@ class Main extends PluginBase implements Listener {
 					if($this->eco->myMoney($sender) >= $zombie){
                        $this->eco->reduceMoney($sender, $zombie);
                        $name = $sender->getName();
-                       $item1 = Item::getNamedTag()->(397, 2, 1);
+                       $item1 = Item::getNamedTag()->$this(397, 2, 1);
                        $item1->setTag("§2Zombie §eMask \n§bOwner: §c$name");
                        $sender->getInventory()->addItem($item1);
 					   $sender->sendMessage($this->getConfig()->get("msg.shop.zombie"));
@@ -104,7 +104,7 @@ class Main extends PluginBase implements Listener {
 					if($this->eco->myMoney($sender) >= $creeper){
                        $this->eco->reduceMoney($sender, $creeper);
                        $name = $sender->getName();
-                       $item2 = Item::getNamedTag->(397, 4, 1);
+                       $item2 = Item::getNamedTag->$this(397, 4, 1);
                        $item2->setTag("§aCreeper §eMask \n§bOwner: §c$name");
                        $sender->getInventory()->addItem($item2);
 					   $sender->sendMessage($this->getConfig()->get("msg.shop.creeper"));
@@ -118,7 +118,7 @@ class Main extends PluginBase implements Listener {
 					if($this->eco->myMoney($sender) >= $wither){
                        $this->eco->reduceMoney($sender, $wither);
                        $name = $sender->getName();
-                       $item3 = Item::getNamedTag->(397, 1, 1);
+                       $item3 = Item::getNamedTag->$this(397, 1, 1);
                        $item3->setTag("§7Wither §eMask \n§bOwner: §c$name");
                        $sender->getInventory()->addItem($item3);
 					   $sender->sendMessage($this->getConfig()->get("msg.shop.wither"));
@@ -132,7 +132,7 @@ class Main extends PluginBase implements Listener {
 					if($this->eco->myMoney($sender) >= $dragon){
                        $this->eco->reduceMoney($sender, $dragon);
                        $name = $sender->getName();
-                       $item5 = Item::getNamedTag->(397, 5, 1);
+                       $item5 = Item::getNamedTag->$this(397, 5, 1);
                        $item5->setTag("§cDragon §eMask \n§bOwner: §c$name");
                        $sender->getInventory()->addItem($item5);
 					   $sender->sendMessage($this->getConfig()->get("msg.shop.dragon"));
@@ -146,7 +146,7 @@ class Main extends PluginBase implements Listener {
 					if($this->eco->myMoney($sender) >= $steve){
                        $this->eco->reduceMoney($sender, $steve);
                        $name = $sender->getName();
-                       $item4 = Item::getNamedTag->(397, 3, 1);
+                       $item4 = Item::getNamedTag->$this(397, 3, 1);
                        $item4->setTag("§3Steve §eMask \n§bOwner: §c$name");
                        $sender->getInventory()->addItem($item4);
 					   $sender->sendMessage($this->getConfig()->get("msg.shop.steve"));
@@ -160,7 +160,7 @@ class Main extends PluginBase implements Listener {
 					if($this->eco->myMoney($sender) >= $skeleton){
                        $this->eco->reduceMoney($sender, $skeleton);
                        $name = $sender->getName();
-                       $item6 = Item::getNamedTag->(397, 0, 1);
+                       $item6 = Item::getNamedTag->$this(397, 0, 1);
                        $item6->setTag("§fSkeleton §eMask \n§bOwner: §c$name");
                        $sender->getInventory()->addItem($item6);
                        $sender->getEffect(new Effect(Effect::add(Effect::HASTE), 22000, 2, false));
