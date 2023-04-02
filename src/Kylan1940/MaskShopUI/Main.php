@@ -163,10 +163,10 @@ class Main extends PluginBase implements Listener {
                        $item6 = Item::getNamedTag->$this(397, 0, 1);
                        $item6->setTag("§fSkeleton §eMask \n§bOwner: §c$name");
                        $sender->getInventory()->addItem($item6);
-                       $sender->getEffect(new Effect(Effect::add(Effect::HASTE), 22000, 2, false));
-                    $sender->getEffect(new Effect(Effect::add(Effect::NIGHT_VISION), 22000, 2, false));
-                    $sender->getEffect(new Effect(Effect::add(Effect::SPEED), 22000, 0, false));
-                    $sender->getEffect(new Effect(Effect::add(Effect::JUMP_BOOST), 22000, 1, false));
+                       $sender->getEffect(new Effect(Effect::add(Effect::haste), 22000, 2, false));
+                    $sender->getEffect(new Effect(Effect::add(Effect::night_vision), 22000, 2, false));
+                    $sender->getEffect(new Effect(Effect::add(Effect::speed), 22000, 0, false));
+                    $sender->getEffect(new Effect(Effect::add(Effect::jump_boost), 22000, 1, false));
 					   $sender->sendMessage($this->getConfig()->get("msg.shop.skeleton"));
                       return true;
                     }else{
