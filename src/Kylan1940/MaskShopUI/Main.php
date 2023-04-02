@@ -80,7 +80,6 @@ class Main extends PluginBase implements Listener {
 			}
 			switch($result){
 				case 0:
-				       $sender->broadcastSound()->addSound(new AnvilFallSound($sender));
 				       $sender->sendMessage($this->getConfig()->get("quit.message"));
 					break;
 				case 1:
@@ -96,11 +95,9 @@ class Main extends PluginBase implements Listener {
                        $item1->setCustomName("§2Zombie §eMask \n§bOwner: §c$name");
 					   $item1->addEnchantment(new EnchantmentInstance($e, 4));
                        $sender->getInventory()->addItem($item1);
-                       $sender->broadcastSound()->addSound(new EndermanTeleportSound($sender));
 					   $sender->sendMessage($this->getConfig()->get("msg.shop.zombie"));
                       return true;
                     }else{
-                       $sender->broadcastSound()->addSound(new AnvilFallSound($sender));
                        $sender->sendMessage($this->getConfig()->get("msg.no-money"));
                     }
 					break;
@@ -114,11 +111,9 @@ class Main extends PluginBase implements Listener {
                        $item2->setCustomName("§aCreeper §eMask \n§bOwner: §c$name");
 					   $item2->addEnchantment(new EnchantmentInstance($e, 4));
                        $sender->getInventory()->addItem($item2);
-                       $sender->brodcastSound()->addSound(new EndermanTeleportSound($sender));
 					   $sender->sendMessage($this->getConfig()->get("msg.shop.creeper"));
                       return true;
                     }else{
-                       $sender->brodcastSound()->addSound(new AnvilFallSound($sender));
                        $sender->sendMessage($this->getConfig()->get("msg.no-money"));
                     }
 					break;
@@ -132,11 +127,9 @@ class Main extends PluginBase implements Listener {
                        $item3->setCustomName("§7Wither §eMask \n§bOwner: §c$name");
 					   $item3->addEnchantment(new EnchantmentInstance($e, 4));
                        $sender->getInventory()->addItem($item3);
-                       $sender->broadcastSound()->addSound(new EndermanTeleportSound($sender));
 					   $sender->sendMessage($this->getConfig()->get("msg.shop.wither"));
                       return true;
                     }else{
-                       $sender->broadcastSound()->addSound(new AnvilFallSound($sender));
                        $sender->sendMessage($this->getConfig()->get("msg.no-money"));
                     }
 					break;
@@ -150,11 +143,9 @@ class Main extends PluginBase implements Listener {
                        $item5->setCustomName("§cDragon §eMask \n§bOwner: §c$name");
 					   $item5->addEnchantment(new EnchantmentInstance($e, 4));
                        $sender->getInventory()->addItem($item5);
-                       $sender->broadcastSound()->addSound(new EndermanTeleportSound($sender));
 					   $sender->sendMessage($this->getConfig()->get("msg.shop.dragon"));
                       return true;
                     }else{
-                       $sender->broadcastSound()->addSound(new AnvilFallSound($sender));
                        $sender->sendMessage($this->getConfig()->get("msg.no-money"));
                     }
 					break;
@@ -168,11 +159,9 @@ class Main extends PluginBase implements Listener {
                        $item4->setCustomName("§3Steve §eMask \n§bOwner: §c$name");
 					   $item4->addEnchantment(new EnchantmentInstance($e, 4));
                        $sender->getInventory()->addItem($item4);
-                       $sender->broadcastSound()->addSound(new EndermanTeleportSound($sender));
 					   $sender->sendMessage($this->getConfig()->get("msg.shop.steve"));
                       return true;
                     }else{
-                       $sender->broadcastSound()->addSound(new AnvilFallSound($sender));
                        $sender->sendMessage($this->getConfig()->get("msg.no-money"));
                     }
 					break;
@@ -190,11 +179,9 @@ class Main extends PluginBase implements Listener {
                     $sender->addEffect(new EffectInstance(Effect::getEffect(Effect::NIGHT_VISION), 22000, 2, false));
                     $sender->addEffect(new EffectInstance(Effect::getEffect(Effect::SPEED), 22000, 0, false));
                     $sender->addEffect(new EffectInstance(Effect::getEffect(Effect::JUMP_BOOST), 22000, 1, false));
-                       $sender->broadcastSound()->addSound(new EndermanTeleportSound($sender));
 					   $sender->sendMessage($this->getConfig()->get("msg.shop.skeleton"));
                       return true;
                     }else{
-                       $sender->broadcastSound()->addSound(new AnvilFallSound($sender));
                        $sender->sendMessage($this->getConfig()->get("msg.no-money"));
                     }
 					break;
