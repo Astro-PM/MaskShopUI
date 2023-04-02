@@ -90,10 +90,9 @@ class Main extends PluginBase implements Listener {
 					if($this->eco->myMoney($sender) >= $zombie){
                        $this->eco->reduceMoney($sender, $zombie);
                        $name = $sender->getName();
-                       $e = Enchantment::getName(0);
-                       $item1 = Item::getNamedTag(397, 2, 1);
-                       $item1->setCustomName("§2Zombie §eMask \n§bOwner: §c$name");
-					   $item1->addEnchantment(new EnchantmentInstance($e, 4));
+                       $e = Enchantment::getName();
+                       $item1 = Item::getNamedTag()->get("397, 2, 1");
+                       $item1->setTag("§2Zombie §eMask \n§bOwner: §c$name");
                        $sender->getInventory()->addItem($item1);
 					   $sender->sendMessage($this->getConfig()->get("msg.shop.zombie"));
                       return true;
@@ -106,10 +105,9 @@ class Main extends PluginBase implements Listener {
 					if($this->eco->myMoney($sender) >= $creeper){
                        $this->eco->reduceMoney($sender, $creeper);
                        $name = $sender->getName();
-                       $e = Enchantment::getName(0);
-                       $item2 = Item::getNamedTag(397, 4, 1);
-                       $item2->setCustomName("§aCreeper §eMask \n§bOwner: §c$name");
-					   $item2->addEnchantment(new EnchantmentInstance($e, 4));
+                       $e = Enchantment::getName();
+                       $item2 = Item::getNamedTag->get("397, 4, 1");
+                       $item2->setTag("§aCreeper §eMask \n§bOwner: §c$name");
                        $sender->getInventory()->addItem($item2);
 					   $sender->sendMessage($this->getConfig()->get("msg.shop.creeper"));
                       return true;
@@ -122,10 +120,9 @@ class Main extends PluginBase implements Listener {
 					if($this->eco->myMoney($sender) >= $wither){
                        $this->eco->reduceMoney($sender, $wither);
                        $name = $sender->getName();
-                       $e = Enchantment::getName(0);
-                       $item3 = Item::getNamedTag(397, 1, 1);
-                       $item3->setCustomName("§7Wither §eMask \n§bOwner: §c$name");
-					   $item3->addEnchantment(new EnchantmentInstance($e, 4));
+                       $e = Enchantment::getName();
+                       $item3 = Item::getNamedTag->get("397, 1, 1");
+                       $item3->setTag("§7Wither §eMask \n§bOwner: §c$name");
                        $sender->getInventory()->addItem($item3);
 					   $sender->sendMessage($this->getConfig()->get("msg.shop.wither"));
                       return true;
@@ -138,10 +135,9 @@ class Main extends PluginBase implements Listener {
 					if($this->eco->myMoney($sender) >= $dragon){
                        $this->eco->reduceMoney($sender, $dragon);
                        $name = $sender->getName();
-                       $e = Enchantment::getName(0);
-                       $item5 = Item::getNamedTag(397, 5, 1);
-                       $item5->setCustomName("§cDragon §eMask \n§bOwner: §c$name");
-					   $item5->addEnchantment(new EnchantmentInstance($e, 4));
+                       $e = Enchantment::getName();
+                       $item5 = Item::getNamedTag->get("397, 5, 1");
+                       $item5->setTag("§cDragon §eMask \n§bOwner: §c$name");
                        $sender->getInventory()->addItem($item5);
 					   $sender->sendMessage($this->getConfig()->get("msg.shop.dragon"));
                       return true;
@@ -154,10 +150,9 @@ class Main extends PluginBase implements Listener {
 					if($this->eco->myMoney($sender) >= $steve){
                        $this->eco->reduceMoney($sender, $steve);
                        $name = $sender->getName();
-                       $e = Enchantment::getName(0);
-                       $item4 = Item::getNamedTag(397, 3, 1);
-                       $item4->setCustomName("§3Steve §eMask \n§bOwner: §c$name");
-					   $item4->addEnchantment(new EnchantmentInstance($e, 4));
+                       $e = Enchantment::getName();
+                       $item4 = Item::getNamedTag->get("397, 3, 1");
+                       $item4->setTag("§3Steve §eMask \n§bOwner: §c$name");
                        $sender->getInventory()->addItem($item4);
 					   $sender->sendMessage($this->getConfig()->get("msg.shop.steve"));
                       return true;
@@ -170,10 +165,9 @@ class Main extends PluginBase implements Listener {
 					if($this->eco->myMoney($sender) >= $skeleton){
                        $this->eco->reduceMoney($sender, $skeleton);
                        $name = $sender->getName();
-                       $e = Enchantment::getName(0);
-                       $item6 = Item::getNamedTag(397, 0, 1);
-                       $item6->setCustomName("§fSkeleton §eMask \n§bOwner: §c$name");
-					   $item6->addEnchantment(new EnchantmentInstance($e, 4));
+                       $e = Enchantment::getName();
+                       $item6 = Item::getNamedTag->get("397, 0, 1");
+                       $item6->setTag("§fSkeleton §eMask \n§bOwner: §c$name");
                        $sender->getInventory()->addItem($item6);
                        $sender->addEffect(new EffectInstance(Effect::getEffect(Effect::HASTE), 22000, 2, false));
                     $sender->addEffect(new EffectInstance(Effect::getEffect(Effect::NIGHT_VISION), 22000, 2, false));
